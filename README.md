@@ -23,3 +23,19 @@ Next sprint will add camera capture → OCR → display.
 ## Run
 
 Open in Xcode 15+, select iPhone simulator, **Run**.
+
+### Commit standards
+
+When you commit going forward, use these prefixes:
+
+feat: new user‑visible feature
+
+fix: bug fix
+
+chore: tooling/infra (no user impact)
+
+docs: README/docs
+
+refactor: code change no new features/bug fixes
+
+test: adding or fixing tests
