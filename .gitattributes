@@ -1,0 +1,17 @@
+* text=auto
+
+# Better diffs for Swift code
+*.swift diff=swift
+
+# Keep Xcode project files as text (so Git can diff them)
+*.pbxproj text
+
+# Treat images as binary (don’t attempt text diffs)
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.heic binary
+
+# Optional: keep our xcassets treated as text pointers
+*.xcassets text
