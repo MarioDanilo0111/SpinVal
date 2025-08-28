@@ -6,6 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		9322A45E2E5CE7E9006E5927 /* CaptureSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9322A45D2E5CE7E4006E5927 /* CaptureSessionManager.swift */; };
+		938BF52D2E5F736D000BC3DB /* VisionOCR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938BF52C2E5F7362000BC3DB /* VisionOCR.swift */; };
+		93B3CE942E5CD51C00677698 /* CameraPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B3CE932E5CC35C00677698 /* CameraPermissions.swift */; };
+		93C41FEE2E5DF38B00A2478D /* CameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C41FED2E5DF37500A2478D /* CameraPreview.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		93BD3B632E5B881F0064D527 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,14 +31,31 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9322A45D2E5CE7E4006E5927 /* CaptureSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureSessionManager.swift; sourceTree = "<group>"; };
+		938BF52C2E5F7362000BC3DB /* VisionOCR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionOCR.swift; sourceTree = "<group>"; };
+		93B3CE932E5CC35C00677698 /* CameraPermissions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPermissions.swift; sourceTree = "<group>"; };
 		93BD3B552E5B881B0064D527 /* SpinVal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpinVal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93BD3B622E5B881F0064D527 /* SpinValTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpinValTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		93BD3B6C2E5B881F0064D527 /* SpinValUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpinValUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		93C41FED2E5DF37500A2478D /* CameraPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		93B3CE902E5CBEE200677698 /* Exceptions for "SpinVal" folder in "SpinVal" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 93BD3B542E5B881B0064D527 /* SpinVal */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		93BD3B572E5B881B0064D527 /* SpinVal */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				93B3CE902E5CBEE200677698 /* Exceptions for "SpinVal" folder in "SpinVal" target */,
+			);
 			path = SpinVal;
 			sourceTree = "<group>";
 		};
@@ -72,9 +96,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		93B3CE922E5CC30500677698 /* CaptureKit */ = {
+			isa = PBXGroup;
+			children = (
+				938BF52C2E5F7362000BC3DB /* VisionOCR.swift */,
+				93C41FED2E5DF37500A2478D /* CameraPreview.swift */,
+				9322A45D2E5CE7E4006E5927 /* CaptureSessionManager.swift */,
+				93B3CE932E5CC35C00677698 /* CameraPermissions.swift */,
+			);
+			path = CaptureKit;
+			sourceTree = "<group>";
+		};
 		93BD3B4C2E5B881B0064D527 = {
 			isa = PBXGroup;
 			children = (
+				93B3CE922E5CC30500677698 /* CaptureKit */,
 				93BD3B572E5B881B0064D527 /* SpinVal */,
 				93BD3B652E5B881F0064D527 /* SpinValTests */,
 				93BD3B6F2E5B881F0064D527 /* SpinValUITests */,
@@ -236,6 +272,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93C41FEE2E5DF38B00A2478D /* CameraPreview.swift in Sources */,
+				93B3CE942E5CD51C00677698 /* CameraPermissions.swift in Sources */,
+				938BF52D2E5F736D000BC3DB /* VisionOCR.swift in Sources */,
+				9322A45E2E5CE7E9006E5927 /* CaptureSessionManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +437,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SpinVal/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires camera access to scan vinyl labels.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -407,6 +449,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				NEW_SETTING = "";
+				NEW_SETTING1 = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.danilo.SpinVal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -424,6 +468,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SpinVal/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires camera access to scan vinyl labels.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -434,6 +480,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				NEW_SETTING = "";
+				NEW_SETTING1 = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.danilo.SpinVal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
