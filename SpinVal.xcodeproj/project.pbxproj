@@ -51,6 +51,21 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		9389A0082E64B4FE004C5C71 /* Models */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9389A0092E64B510004C5C71 /* DataLayer */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = DataLayer;
+			sourceTree = "<group>";
+		};
+		93BC00B22E604A6B001813F0 /* Parsing */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Parsing;
+			sourceTree = "<group>";
+		};
 		93BD3B572E5B881B0064D527 /* SpinVal */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
@@ -110,6 +125,9 @@
 		93BD3B4C2E5B881B0064D527 = {
 			isa = PBXGroup;
 			children = (
+				9389A0092E64B510004C5C71 /* DataLayer */,
+				9389A0082E64B4FE004C5C71 /* Models */,
+				93BC00B22E604A6B001813F0 /* Parsing */,
 				93B3CE922E5CC30500677698 /* CaptureKit */,
 				93BD3B572E5B881B0064D527 /* SpinVal */,
 				93BD3B652E5B881F0064D527 /* SpinValTests */,
@@ -144,6 +162,9 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				9389A0082E64B4FE004C5C71 /* Models */,
+				9389A0092E64B510004C5C71 /* DataLayer */,
+				93BC00B22E604A6B001813F0 /* Parsing */,
 				93BD3B572E5B881B0064D527 /* SpinVal */,
 			);
 			name = SpinVal;

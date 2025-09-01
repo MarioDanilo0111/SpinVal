@@ -26,7 +26,7 @@ struct ContentView: View {
                 Image(uiImage: img)
                     .resizable()
                     .scaledToFill()
-                    .frame(width: 80, height: 80)
+                    .frame(width: 120, height: 120)
                     .clipShape(RoundedRectangle(cornerRadius: 12))
                     .overlay(RoundedRectangle(cornerRadius: 12).stroke(.white.opacity(0.6), lineWidth: 1))
                     .shadow(radius: 4)
@@ -46,6 +46,27 @@ struct ContentView: View {
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
             }
             
+            if !camera.catalogCode.isEmpty{
+                Text("Catalog: \(camera.catalogCode)")
+                    .font(.system(size: 14, weight: .semibold, design: .monospaced))
+                    .padding(10)
+                    .background(.black.opacity(0.65))
+                    .foregroundStyle(.white)
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .padding()
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomLeading)
+            }
+            
+            if let err = camera.lastError {
+                Text("Camera error: \(err)")
+                    .font(.system(size: 14, weight: .semibold, design: .rounded))
+                    .padding(10)
+                    .background(.red.opacity(0.7))
+                    .foregroundStyle(.white)
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .padding()
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+            }
             
             //Capture button (button-center)
             VStack {
