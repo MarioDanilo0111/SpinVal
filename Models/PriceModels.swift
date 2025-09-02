@@ -4,7 +4,6 @@
 //
 //  Created by Mario Fernandez on 2025-08-31.
 //
-
 import Foundation
 
 public typealias CurrencyCode = String
@@ -34,3 +33,4 @@ public struct PriceBand: Codable, Hashable, Sendable  {
         self.lastUpdated = lastUpdated
     }
 }
+

@@ -4,6 +4,7 @@
 //
 //  Created by Mario Fernandez on 2025-08-31.
 //
+
 import Foundation
 
 public typealias ReleaseID = String
